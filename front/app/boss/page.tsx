@@ -12,6 +12,7 @@ import { Select } from '@/components/ui/select'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import PageHeader from '@/app/components/PageHeader'
 import AnalysisContent from '@/app/boss/analysis/AnalysisContent'
+import ReplyContent from '@/app/boss/ReplyContent'
 import { API_BASE } from '@/lib/api'
 
 interface BossConfig {
@@ -589,9 +590,10 @@ export default function BossPage() {
       />
 
       <Tabs defaultValue="config" className="w-full">
-        <TabsList className="grid w-full grid-cols-2">
+        <TabsList className="grid w-full grid-cols-3">
           <TabsTrigger value="config">平台配置</TabsTrigger>
           <TabsTrigger value="analytics">投递分析</TabsTrigger>
+          <TabsTrigger value="replies">回复助手</TabsTrigger>
         </TabsList>
 
         <TabsContent value="config" className="space-y-6 mt-6">
@@ -918,6 +920,9 @@ export default function BossPage() {
 
         <TabsContent value="analytics" className="space-y-6 mt-6">
           <AnalysisContent />
+        </TabsContent>
+        <TabsContent value="replies" className="space-y-6 mt-6">
+          <ReplyContent />
         </TabsContent>
       </Tabs>
 

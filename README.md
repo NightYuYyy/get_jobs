@@ -1,3 +1,5 @@
+> 本 fork 的 BOSS 回复模块与上游同步说明：[doc/boss-replies.md](doc/boss-replies.md)。默认关闭，不影响当前投递。
+
 <h1 align="center">🍀 Get Jobs【工作无忧】</h1>
 <div align="center">
 
