@@ -74,6 +74,7 @@ public class AiService {
         }
 
         HttpRequest request = HttpRequest.newBuilder()
+                .timeout(Duration.ofSeconds(60))
                 .uri(URI.create(endpoint))
                 .header("Content-Type", "application/json")
                 .header("Accept", "application/json")
@@ -211,6 +212,7 @@ public class AiService {
         requestData.put("input", content);
 
         HttpRequest request = HttpRequest.newBuilder()
+                .timeout(Duration.ofSeconds(60))
                 .uri(URI.create(endpoint))
                 .header("Content-Type", "application/json")
                 .header("Accept", "application/json")
